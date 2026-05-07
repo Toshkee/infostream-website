@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "whatWeDo": "What We Do",
+    "technologies": "Technologies",
+    "aboutUs": "About us",
+    "team": "Team"
+  },
+  "home": {
+    "heroTitle": "Enterprise IT solutions",
+    "heroTagOne": "#followTheStream",
+    "heroTagTwo": "#fullStackSolutions",
+    "heroBody": "We design, build and run enterprise software for finance and public services — engineered for scale, secured to ISO standards, delivered on time.",
+    "contactSales": "Contact us",
+    "trustedBy": "Trusted by institutions and enterprises",
+    "buildLabel": "Build",
+    "operateLabel": "Operate"
+  },
+  "ctaBanner": "Development and implementation of quality business software solutions.",
+  "services": {
+    "readMore": "Read more",
+    "financialSoftware": {
+      "title": "Financial software development",
+      "summary": "We design, develop, and implement custom financial software in companies and public institutions. We integrate technology into offerings by financial services companies and institutions to improve their use and delivery to consumers."
+    },
+    "registers": {
+      "title": "Registers",
+      "summary": "Financial systems are usually based on data from registers. We develop registers as a secure database record information about the entities involved in business process as a final destination of administrative procedures. We have experience in building: Register of citizens (CR), Company registers (COR), Employee registers (ER), Address register (AR)."
+    },
+    "digitalTransformation": {
+      "title": "Digital transformation",
+      "summary": "We help companies and institutions in their need to transform their businesses from paper-based work processes to digitalised form. We develop systems for gathering paper and other unstructured information and transform it into the digital form, with centralized processing. This makes information secure and available."
+    },
+    "itInfrastructure": {
+      "title": "IT Infrastructure",
+      "summary": "We strive to apply technology to our partners' business needs preserving customer focus. Precisely matching different technology to the business needs is our core expertise. Through our rich experience, we crafted a suite of services and technology to be flexible and responsive. This allows us to deliver fast, impactful results to customers' digital initiatives."
+    },
+    "consulting": {
+      "title": "Consulting",
+      "summary": "Consulting services help our clients to evaluate their opportunities and apply the right technology that that can reshape their business and processes to deliver innovation and digital excellence."
+    },
+    "cybersecurity": {
+      "title": "Business IT protection — Bitdefender antivirus",
+      "summary": "Did you know that the number of cyber-attacks increased by 42% in the first half of 2022? Every business uses essential data without which everyday business would be impossible. Don't let your company become an easy target — protect your infrastructure with Bitdefender."
+    },
+    "paymentSystems": {
+      "title": "Payment systems",
+      "summary": "Modern, secure payment systems and integrations for financial institutions and businesses."
+    }
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "title": "From discovery to",
+    "titleAccent": "delivery.",
+    "steps": [
+      {
+        "title": "Discovery",
+        "body": "We map your goals, constraints and existing systems. Stakeholder interviews, technical audit, scope alignment."
+      },
+      {
+        "title": "Design",
+        "body": "Architecture, data models and UX flows. ISO-aligned security and compliance baked in from day one."
+      },
+      {
+        "title": "Build",
+        "body": "Agile sprints, continuous integration, transparent reporting. You see progress every two weeks, not at the end."
+      },
+      {
+        "title": "Operate",
+        "body": "Hand-off, monitoring and ongoing support. We stay available long after go-live to keep systems healthy."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Trusted by teams",
+    "titleAccent": "that can't fail.",
+    "items": [
+      {
+        "quote": "Infostream delivered a complex registry platform on schedule and well within budget. Their team understands the public sector inside out.",
+        "name": "Public sector client",
+        "role": "Programme director",
+        "initials": "PS"
+      },
+      {
+        "quote": "What sets them apart is the engineering discipline. ISO-grade security, clean documentation, and zero surprises in production.",
+        "name": "Financial institution",
+        "role": "CTO",
+        "initials": "FI"
+      },
+      {
+        "quote": "Fifteen years of partnership across multiple critical systems. They are an extension of our own technical team at this point.",
+        "name": "Government agency",
+        "role": "Head of IT",
+        "initials": "GA"
+      }
+    ]
+  },
+  "whatWeDo": {
+    "heroTitle": "What we do"
+  },
+  "technologies": {
+    "heroTitle": "Technologies",
+    "sectionTitle": "Technologies we use",
+    "sectionBody": "By matching a different technologies to business needs we get the most efficiency. We love to govern new exciting technologies and tools that motivate us to build beautiful and functional software. We leverage our deep tech expertise in Oracle, Microsoft .NET, C#, MVC, Java, Angular, Apex, to develop custom cutting-edge products."
+  },
+  "about": {
+    "heroTitle": "About us",
+    "heroEyebrow": "Who we are",
+    "paragraphs": [
+      "We are specialized in the development of enterprise IT solutions in the area of finance and public services.",
+      "Our approach is to use a flexible and agile methodology to software development with specific and strong project management, verified by ISO standards in information security management and software engineering, development and maintenance of software.",
+      "Our team of engineers and consultants, with over 15 years of experience, are capable of implementing large scale enterprise IT projects on time and on budget.",
+      "We love to govern new exciting technologies and tools that motivate us to build beautiful and functional software. We leverage our deep tech expertise in Oracle, Microsoft .NET, C#, MVC, Java, Angular, Apex, to develop custom cutting-edge products.",
+      "Being a reliable partner to the digital community, a responsible entity in the economic ecosystem, an initiator of positive changes and innovations remain Infostream's goals for the future."
+    ],
+    "valuesTitle": "Solutions driven by our",
+    "valuesTitleAccent": "core values:",
+    "values": [
+      {
+        "title": "Bring new value to customer",
+        "body": "We bring willingness to do what it takes to create new value for all stakeholders"
+      },
+      {
+        "title": "Pursue excellence",
+        "body": "We embrace expertise and solutions-oriented teams. We focus on solutions, not problems."
+      },
+      {
+        "title": "Do things responsibly",
+        "body": "We simultaneously support the success of our employees, partners and customers."
+      },
+      {
+        "title": "Spark innovation",
+        "body": "We strive to the technological breakthroughs and innovations that customers want."
+      }
+    ]
+  },
+  "team": {
+    "title": "Our team"
+  },
+  "footer": {
+    "tagline": "We love to govern new exciting technologies and tools that motivate us to build beautiful and functional software",
+    "aboutOurWorkTitle": "About our work",
+    "followUsTitle": "Follow Us",
+    "generalInfo": "General information",
+    "customerSupport": "Customer support",
+    "phone": "Phone"
+  }
+}

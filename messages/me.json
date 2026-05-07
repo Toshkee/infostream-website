@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Početna",
+    "whatWeDo": "Šta radimo",
+    "technologies": "Tehnologije",
+    "aboutUs": "O nama",
+    "team": "Tim"
+  },
+  "home": {
+    "heroTitle": "Enterprise IT rješenja",
+    "heroTagOne": "#followTheStream",
+    "heroTagTwo": "#fullStackSolutions",
+    "heroBody": "Dizajniramo, gradimo i održavamo enterprise softver za finansije i javni sektor — projektovan za skaliranje, osiguran prema ISO standardima, isporučen na vrijeme.",
+    "contactSales": "Kontaktirajte nas",
+    "trustedBy": "Povjerenje institucija i kompanija",
+    "buildLabel": "Razvoj",
+    "operateLabel": "Održavanje"
+  },
+  "ctaBanner": "Razvoj i implementacija kvalitetnih poslovnih softverskih rješenja.",
+  "services": {
+    "readMore": "Saznaj više",
+    "financialSoftware": {
+      "title": "Razvoj finansijskog softvera",
+      "summary": "Dizajniramo, razvijamo i implementiramo finansijski softver po mjeri za kompanije i javne institucije. Integrišemo tehnologiju u usluge finansijskih institucija kako bismo unaprijedili njihovu upotrebu i isporuku korisnicima."
+    },
+    "registers": {
+      "title": "Registri",
+      "summary": "Finansijski sistemi se najčešće zasnivaju na podacima iz registara. Razvijamo registre kao bezbjedne baze podataka o subjektima u poslovnim procesima. Imamo iskustvo u izgradnji: Registra građana (CR), Registra privrednih društava (COR), Registra zaposlenih (ER) i Adresnog registra (AR)."
+    },
+    "digitalTransformation": {
+      "title": "Digitalna transformacija",
+      "summary": "Pomažemo kompanijama i institucijama da svoje poslovanje prevedu iz papirne u digitalnu formu. Razvijamo sisteme za prikupljanje papirnih i drugih nestrukturisanih podataka i njihovu konverziju u digitalni oblik sa centralizovanom obradom."
+    },
+    "itInfrastructure": {
+      "title": "IT infrastruktura",
+      "summary": "Tehnologiju prilagođavamo poslovnim potrebama naših partnera, uz stalan fokus na korisnika. Precizno povezivanje različitih tehnologija sa poslovnim potrebama je naša ključna ekspertiza."
+    },
+    "consulting": {
+      "title": "Konsalting",
+      "summary": "Konsultantske usluge pomažu klijentima da procijene mogućnosti i primijene pravu tehnologiju koja može preoblikovati poslovanje i procese, donoseći inovacije i digitalnu izvrsnost."
+    },
+    "cybersecurity": {
+      "title": "Zaštita poslovne IT infrastrukture — Bitdefender antivirus",
+      "summary": "Da li ste znali da je broj sajber napada porastao za 42% u prvoj polovini 2022. godine? Svaki posao se oslanja na ključne podatke bez kojih svakodnevno poslovanje nije moguće. Ne dozvolite da postanete laka meta sajber napada — zaštitite svoju infrastrukturu uz Bitdefender."
+    },
+    "paymentSystems": {
+      "title": "Platni sistemi",
+      "summary": "Moderni i bezbjedni platni sistemi i integracije za finansijske institucije i kompanije."
+    }
+  },
+  "process": {
+    "eyebrow": "Kako radimo",
+    "title": "Od ideje do",
+    "titleAccent": "isporuke.",
+    "steps": [
+      {
+        "title": "Otkrivanje",
+        "body": "Mapiramo vaše ciljeve, ograničenja i postojeće sisteme. Razgovori sa ključnim učesnicima, tehnička analiza i usaglašavanje obima projekta."
+      },
+      {
+        "title": "Dizajn",
+        "body": "Arhitektura, modeli podataka i korisnički tokovi. Bezbjednost i usklađenost sa ISO standardima ugrađeni od prvog dana."
+      },
+      {
+        "title": "Razvoj",
+        "body": "Agilni sprintovi, kontinuirana integracija i transparentno izvještavanje. Napredak vidite svake dvije sedmice, ne tek na kraju."
+      },
+      {
+        "title": "Održavanje",
+        "body": "Predaja, nadzor i kontinuirana podrška. Ostajemo uz vas dugo nakon puštanja u rad kako bi sistemi radili besprekorno."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Povjerenje timova",
+    "titleAccent": "koji ne smiju da pogriješe.",
+    "items": [
+      {
+        "quote": "Infostream je isporučio kompleksnu platformu registara na vrijeme i u okviru budžeta. Njihov tim odlično razumije javni sektor.",
+        "name": "Klijent iz javnog sektora",
+        "role": "Direktor programa",
+        "initials": "JS"
+      },
+      {
+        "quote": "Ono što ih izdvaja je inženjerska disciplina. Bezbjednost na nivou ISO standarda, jasna dokumentacija i nikakva iznenađenja u produkciji.",
+        "name": "Finansijska institucija",
+        "role": "CTO",
+        "initials": "FI"
+      },
+      {
+        "quote": "Petnaest godina partnerstva na više kritičnih sistema. Oni su praktično postali produžetak našeg tehničkog tima.",
+        "name": "Državna agencija",
+        "role": "Šef IT sektora",
+        "initials": "DA"
+      }
+    ]
+  },
+  "whatWeDo": {
+    "heroTitle": "Šta radimo"
+  },
+  "technologies": {
+    "heroTitle": "Tehnologije",
+    "sectionTitle": "Tehnologije koje koristimo",
+    "sectionBody": "Prilagođavanjem različitih tehnologija poslovnim potrebama postižemo najveću efikasnost. Volimo da savladavamo nove uzbudljive tehnologije i alate koji nas motivišu da gradimo lijep i funkcionalan softver. Koristimo duboku tehničku ekspertizu u Oracle, Microsoft .NET, C#, MVC, Java, Angular i Apex tehnologijama za razvoj proizvoda na ivici tehnologije."
+  },
+  "about": {
+    "heroTitle": "O nama",
+    "heroEyebrow": "Ko smo mi",
+    "paragraphs": [
+      "Specijalizovani smo za razvoj enterprise IT rješenja u oblasti finansija i javnih usluga.",
+      "Naš pristup razvoju softvera oslanja se na fleksibilnu i agilnu metodologiju, uz precizno i snažno upravljanje projektima, verifikovano ISO standardima u oblasti upravljanja informacionom bezbjednošću i softverskog inženjeringa.",
+      "Naš tim inženjera i konsultanata, sa preko 15 godina iskustva, sposoban je da realizuje velike enterprise IT projekte na vrijeme i u okviru budžeta.",
+      "Volimo da savladavamo nove uzbudljive tehnologije i alate koji nas motivišu da gradimo lijep i funkcionalan softver. Koristimo duboku tehničku ekspertizu u Oracle, Microsoft .NET, C#, MVC, Java, Angular i Apex tehnologijama za razvoj proizvoda na ivici tehnologije.",
+      "Biti pouzdan partner digitalnoj zajednici, odgovoran subjekt u ekonomskom ekosistemu i pokretač pozitivnih promjena i inovacija — ostaju Infostreamovi ciljevi za budućnost."
+    ],
+    "valuesTitle": "Rješenja vođena našim",
+    "valuesTitleAccent": "ključnim vrijednostima:",
+    "values": [
+      {
+        "title": "Donosimo novu vrijednost klijentu",
+        "body": "Spremni smo da učinimo sve što je potrebno kako bismo stvorili novu vrijednost za sve uključene strane."
+      },
+      {
+        "title": "Težimo izvrsnosti",
+        "body": "Vjerujemo u ekspertizu i timove orijentisane ka rješenjima. Fokusirani smo na rješenja, a ne na probleme."
+      },
+      {
+        "title": "Radimo odgovorno",
+        "body": "Istovremeno podržavamo uspjeh naših zaposlenih, partnera i klijenata."
+      },
+      {
+        "title": "Pokrećemo inovacije",
+        "body": "Težimo tehnološkim prodorima i inovacijama koje naši klijenti zaista žele."
+      }
+    ]
+  },
+  "team": {
+    "title": "Naš tim"
+  },
+  "footer": {
+    "tagline": "Volimo da savladavamo nove uzbudljive tehnologije i alate koji nas motivišu da gradimo lijep i funkcionalan softver.",
+    "aboutOurWorkTitle": "O našem radu",
+    "followUsTitle": "Pratite nas",
+    "generalInfo": "Opšte informacije",
+    "customerSupport": "Korisnička podrška",
+    "phone": "Telefon"
+  }
+}
