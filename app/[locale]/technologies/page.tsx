@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getDictionary, hasLocale } from "@/lib/i18n";
 import { PageHero } from "@/components/services/PageHero";
-import { TechCircle } from "@/components/technologies/TechCircle";
+import { TechStack } from "@/components/technologies/TechStack";
 
 export async function generateMetadata({
   params,
@@ -26,19 +26,18 @@ export default async function TechnologiesPage({
 
   return (
     <>
-      <PageHero title={dict.technologies.heroTitle} />
+      <PageHero
+        title={dict.technologies.heroTitle}
+        image={{ src: "/images/pic8.jpg", alt: "Team building software with modern tools" }}
+      />
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-12 md:grid-cols-2 md:items-center">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-heading sm:text-4xl">
-              {dict.technologies.sectionTitle}
-            </h2>
-            <p className="mt-5 text-lg leading-relaxed text-body">
-              {dict.technologies.sectionBody}
-            </p>
-          </div>
-          <TechCircle />
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-body">
+          {dict.technologies.sectionBody}
+        </p>
+
+        <div className="mt-16">
+          <TechStack items={dict.technologies.items} />
         </div>
       </section>
     </>

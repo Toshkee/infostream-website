@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ServiceKey } from "@/lib/services";
 
 const palettes: Record<ServiceKey, [string, string, string]> = {
@@ -10,8 +11,19 @@ const palettes: Record<ServiceKey, [string, string, string]> = {
   paymentSystems: ["#A8FFE7", "#5B4FE9", "#FFB7D5"],
 };
 
-export function ServiceIllustration({ serviceKey }: { serviceKey: ServiceKey }) {
+const images: Record<ServiceKey, { src: string; alt: string }> = {
+  financialSoftware: { src: "/images/pic2.jpg", alt: "Financial software development illustration" },
+  registers: { src: "/images/pic3.jpg", alt: "Registers illustration" },
+  digitalTransformation: { src: "/images/pic4.jpg", alt: "Digital transformation illustration" },
+  itInfrastructure: { src: "/images/pic5.jpg", alt: "IT infrastructure illustration" },
+  consulting: { src: "/images/pic6.jpg", alt: "Consulting illustration" },
+  cybersecurity: { src: "/images/pic7.jpg", alt: "Cybersecurity illustration" },
+  paymentSystems: { src: "/images/pic2.jpg", alt: "Payment systems illustration" },
+};
+
+export function ServiceIllustration({ serviceKey, priority }: { serviceKey: ServiceKey; priority?: boolean }) {
   const [a, b, c] = palettes[serviceKey];
+  const { src, alt } = images[serviceKey];
   return (
     <div
       className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border"
@@ -33,13 +45,14 @@ export function ServiceIllustration({ serviceKey }: { serviceKey: ServiceKey }) 
             "radial-gradient(circle at 80% 20%, rgba(255,255,255,0.6) 0%, transparent 50%)",
         }}
       />
-      <div className="absolute inset-0 grid grid-cols-3 gap-3 p-6">
-        <div className="col-span-2 rounded-xl bg-white/40 backdrop-blur-sm ring-1 ring-white/30" />
-        <div className="rounded-xl bg-white/30 backdrop-blur-sm ring-1 ring-white/20" />
-        <div className="rounded-xl bg-white/30 backdrop-blur-sm ring-1 ring-white/20" />
-        <div className="rounded-xl bg-white/40 backdrop-blur-sm ring-1 ring-white/30" />
-        <div className="rounded-xl bg-white/30 backdrop-blur-sm ring-1 ring-white/20" />
-      </div>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(min-width: 768px) 50vw, 100vw"
+        className="relative z-10 object-contain p-8"
+        priority={priority}
+      />
     </div>
   );
 }

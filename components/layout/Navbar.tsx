@@ -49,8 +49,8 @@ export function Navbar({ locale, nav }: { locale: string; nav: NavDict }) {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href={`/${locale}`} aria-label="Infostream home">
-          <Logo variant={scrolled ? "color" : "white"} size="lg" />
+        <Link href={`/${locale}`} aria-label="Infostream home" className="-ml-4 mt-1">
+          <Logo variant="color" size="lg" />
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -59,9 +59,13 @@ export function Navbar({ locale, nav }: { locale: string; nav: NavDict }) {
               <Link
                 href={l.href}
                 className={`rounded-full px-3 py-2 text-sm transition-colors ${
-                  isActive(l.href, l.exact)
-                    ? "font-semibold text-heading"
-                    : "text-body hover:text-heading"
+                  scrolled
+                    ? isActive(l.href, l.exact)
+                      ? "font-semibold text-heading"
+                      : "text-body hover:text-heading"
+                    : isActive(l.href, l.exact)
+                      ? "font-semibold text-[color:var(--hero-fg)]"
+                      : "text-[color:var(--hero-fg-muted)] hover:text-[color:var(--hero-fg)]"
                 }`}
               >
                 {l.label}
@@ -75,20 +79,28 @@ export function Navbar({ locale, nav }: { locale: string; nav: NavDict }) {
             <Link
               href={switchHref("mne")}
               className={
-                locale === "mne"
-                  ? "font-semibold text-heading"
-                  : "text-muted hover:text-heading"
+                scrolled
+                  ? locale === "mne"
+                    ? "font-semibold text-heading"
+                    : "text-muted hover:text-heading"
+                  : locale === "mne"
+                    ? "font-semibold text-[color:var(--hero-fg)]"
+                    : "text-[color:var(--hero-fg-muted)] hover:text-[color:var(--hero-fg)]"
               }
             >
               mne
             </Link>
-            <span className="text-border">/</span>
+            <span className={scrolled ? "text-border" : "text-[color:var(--hero-fg-faint)]"}>/</span>
             <Link
               href={switchHref("eng")}
               className={
-                locale === "eng"
-                  ? "font-semibold text-heading"
-                  : "text-muted hover:text-heading"
+                scrolled
+                  ? locale === "eng"
+                    ? "font-semibold text-heading"
+                    : "text-muted hover:text-heading"
+                  : locale === "eng"
+                    ? "font-semibold text-[color:var(--hero-fg)]"
+                    : "text-[color:var(--hero-fg-muted)] hover:text-[color:var(--hero-fg)]"
               }
             >
               eng

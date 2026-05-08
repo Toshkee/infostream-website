@@ -1,9 +1,7 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { getDictionary, hasLocale } from "@/lib/i18n";
 import { PageHero } from "@/components/services/PageHero";
-import { ServiceIllustration } from "@/components/services/ServiceIllustration";
+import { ServiceRow } from "@/components/services/ServiceRow";
 import { SERVICES_ORDER, SERVICE_SLUGS } from "@/lib/services";
 import type { Metadata } from "next";
 
@@ -29,36 +27,34 @@ export default async function WhatWeDoPage({
 
   return (
     <>
-      <PageHero title={dict.whatWeDo.heroTitle} />
-      <div className="mx-auto max-w-7xl px-6 py-20">
-        <ul className="grid gap-10 md:grid-cols-2">
-          {SERVICES_ORDER.map((key) => {
-            const s = dict.services[key];
-            return (
-              <li
-                key={key}
-                className="overflow-hidden rounded-3xl border border-border bg-surface shadow-sm transition-all hover:shadow-lg"
-              >
-                <ServiceIllustration serviceKey={key} />
-                <div className="p-6">
-                  <h2 className="text-xl font-semibold text-heading">
-                    {s.title}
-                  </h2>
-                  <p className="mt-2 text-sm leading-relaxed text-body">
-                    {s.summary}
-                  </p>
-                  <Link
-                    href={`/${locale}/what-we-do/${SERVICE_SLUGS[key]}`}
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-brand-teal hover:text-brand-teal-dark"
-                  >
-                    {dict.services.readMore}
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+      <PageHero
+        title={dict.whatWeDo.heroTitle}
+        eyebrow={dict.whatWeDo.heroEyebrow}
+        body={dict.whatWeDo.heroBody}
+        image={{ src: "/images/pic1.jpg", alt: "Mobile and tablet analytics dashboard mockups" }}
+        imageRotate={30}
+      />
+
+      <div className="divide-y divide-border bg-surface">
+        {SERVICES_ORDER.map((key, i) => {
+          const s = dict.services[key];
+          const projects =
+            (dict.whatWeDo.projects as Record<string, string[]>)[key] ?? [];
+          return (
+            <ServiceRow
+              key={key}
+              index={i}
+              serviceKey={key}
+              title={s.title}
+              body={s.summary}
+              href={`/${locale}/what-we-do/${SERVICE_SLUGS[key]}`}
+              readMoreLabel={dict.services.readMore}
+              projectsLabel={dict.whatWeDo.projectsLabel}
+              projects={projects}
+              imageRight={i % 2 === 0}
+            />
+          );
+        })}
       </div>
     </>
   );

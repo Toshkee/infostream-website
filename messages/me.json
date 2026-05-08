@@ -1,16 +1,22 @@
 {
   "nav": {
     "home": "Početna",
-    "whatWeDo": "Šta radimo",
+    "whatWeDo": "Proizvodi i usluge",
     "technologies": "Tehnologije",
     "aboutUs": "O nama",
     "team": "Tim"
   },
   "home": {
-    "heroTitle": "Enterprise IT rješenja",
+    "heroTitle": "Poslovna IT rješenja",
     "heroTagOne": "#followTheStream",
     "heroTagTwo": "#fullStackSolutions",
     "heroBody": "Dizajniramo, gradimo i održavamo enterprise softver za finansije i javni sektor — projektovan za skaliranje, osiguran prema ISO standardima, isporučen na vrijeme.",
+    "slideBitdefenderTitle": "Bitdefender zaštita",
+    "slideBitdefenderTag": "#PremiumSecurity",
+    "slideBitdefenderBody": "Vrhunska zaštita poslovne IT infrastrukture od sajber napada — uz Bitdefender rješenja za preduzeća i institucije.",
+    "slideDevTitle": "IT razvoj sa nama",
+    "slideDevTag": "#beyondTech",
+    "slideDevBody": "IT razvoj sa nama je više od projekta — gledamo dalje od tehnologije kako bismo ponudili rješenja koja zaista donose vrijednost.",
     "contactSales": "Kontaktirajte nas",
     "trustedBy": "Povjerenje institucija i kompanija",
     "buildLabel": "Razvoj",
@@ -20,7 +26,7 @@
   "services": {
     "readMore": "Saznaj više",
     "financialSoftware": {
-      "title": "Razvoj finansijskog softvera",
+      "title": "Razvoj finansijskih softvera",
       "summary": "Dizajniramo, razvijamo i implementiramo finansijski softver po mjeri za kompanije i javne institucije. Integrišemo tehnologiju u usluge finansijskih institucija kako bismo unaprijedili njihovu upotrebu i isporuku korisnicima."
     },
     "registers": {
@@ -40,7 +46,7 @@
       "summary": "Konsultantske usluge pomažu klijentima da procijene mogućnosti i primijene pravu tehnologiju koja može preoblikovati poslovanje i procese, donoseći inovacije i digitalnu izvrsnost."
     },
     "cybersecurity": {
-      "title": "Zaštita poslovne IT infrastrukture — Bitdefender antivirus",
+      "title": "Poslovna IT zaštita — Bitdefender antivirus",
       "summary": "Da li ste znali da je broj sajber napada porastao za 42% u prvoj polovini 2022. godine? Svaki posao se oslanja na ključne podatke bez kojih svakodnevno poslovanje nije moguće. Ne dozvolite da postanete laka meta sajber napada — zaštitite svoju infrastrukturu uz Bitdefender."
     },
     "paymentSystems": {
@@ -96,12 +102,67 @@
     ]
   },
   "whatWeDo": {
-    "heroTitle": "Šta radimo"
+    "heroTitle": "Naši proizvodi i usluge",
+    "heroEyebrow": "Naše usluge",
+    "heroBody": "Od finansijskih platformi i digitalnih registara do sajber bezbjednosti — isporučujemo enterprise sisteme za institucije i kompanije.",
+    "projectsLabel": "Odabrani projekti",
+    "projects": {
+      "financialSoftware": [
+        "Online platforma za prijavu za poslovne subvencije",
+        "Fond PIO Crne Gore",
+        "Platforma za prijavu COVID-19 subvencija zarada",
+        "UCG3 (Taksi) informacioni sistem"
+      ],
+      "registers": [
+        "Digitalni adresni registar Crne Gore",
+        "Centralni registar privrednih subjekata",
+        "eFirma — Online platforma za registraciju privrednih subjekata",
+        "Registar građana (CR)"
+      ],
+      "digitalTransformation": [
+        "Sistem za upravljanje dokumentima — Ministarstvo odbrane",
+        "ERP Skupštine Crne Gore",
+        "Digitalni tokovi rada Ministarstva unutrašnjih poslova"
+      ],
+      "itInfrastructure": [
+        "Privatna cloud infrastruktura za javne institucije",
+        "Klasteri baza podataka visoke dostupnosti",
+        "Dizajn mrežne i bezbjednosne arhitekture"
+      ],
+      "consulting": [
+        "IT strategija i savjetovanje o digitalnoj transformaciji",
+        "Podrška za nabavke i tendere",
+        "Arhitekturalne i bezbjednosne revizije"
+      ],
+      "cybersecurity": [
+        "Bitdefender GravityZone za preduzeća",
+        "Implementacija zaštite endpoint-a i email-a",
+        "Operativni centar i nadzor prijetnji"
+      ]
+    }
   },
   "technologies": {
     "heroTitle": "Tehnologije",
     "sectionTitle": "Tehnologije koje koristimo",
-    "sectionBody": "Prilagođavanjem različitih tehnologija poslovnim potrebama postižemo najveću efikasnost. Volimo da savladavamo nove uzbudljive tehnologije i alate koji nas motivišu da gradimo lijep i funkcionalan softver. Koristimo duboku tehničku ekspertizu u Oracle, Microsoft .NET, C#, MVC, Java, Angular i Apex tehnologijama za razvoj proizvoda na ivici tehnologije."
+    "sectionBody": "Prilagođavanjem različitih tehnologija poslovnim potrebama postižemo najveću efikasnost. Volimo da istražujemo nove alate koji nam pomažu da gradimo lijep, funkcionalan i pouzdan softver — uz duboku ekspertizu u Oracle, Microsoft .NET, C#, Java, Angular i savremenim DevOps praksama.",
+    "items": [
+      {
+        "title": ".NET",
+        "body": "Microsoftova razvojna platforma već dvije decenije predstavlja odličan izbor, prvenstveno zahvaljujući intuitivnim i svestranim frameworkovima, jezicima i alatima. C# i .NET Framework/Core gotovo univerzalno se smatraju jednom od „najomiljenijih\" tehnologija za web razvoj. S obzirom na svoju zrelost, bogatiji su funkcionalnostima i kompletniji od novijih alternativa."
+      },
+      {
+        "title": "Oracle",
+        "body": "Skalabilnost i sigurnost oduvijek su činile Oracle baze podataka pogodnim za enterprise okruženja, a i danas imaju prednost nad konkurencijom kako u osnovnim funkcijama baze, tako i u naprednim mogućnostima."
+      },
+      {
+        "title": "DevOps",
+        "body": "Naši developeri spajaju izmjene koda u centralni repozitorijum, nakon čega se automatski izvršavaju build-ovi i testovi. Kontinuirana integracija koristi se u većini naših projekata radi većeg kvaliteta i bržeg razvoja."
+      },
+      {
+        "title": "Microservices",
+        "body": "Mikroservisi imaju važnu ulogu u savremenom razvoju, jer omogućavaju lakšu isporuku, testiranje i dugoročno održavanje rješenja. Dijeleći složene sisteme na nezavisne komponente sa jednom odgovornošću, mikroservisi omogućavaju jednostavan i agilan razvoj koji prati savremene poslovne zahtjeve."
+      }
+    ]
   },
   "about": {
     "heroTitle": "O nama",

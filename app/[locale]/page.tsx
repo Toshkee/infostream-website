@@ -26,10 +26,27 @@ export default async function HomePage({
   return (
     <>
       <Hero
-        title={dict.home.heroTitle}
-        tagOne={dict.home.heroTagOne}
-        tagTwo={dict.home.heroTagTwo}
-        body={dict.home.heroBody}
+        slides={[
+          {
+            title: dict.home.heroTitle,
+            tagOne: dict.home.heroTagOne,
+            tagTwo: dict.home.heroTagTwo,
+            body: dict.home.heroBody,
+            variant: "single",
+          },
+          {
+            title: dict.home.slideBitdefenderTitle,
+            tagOne: dict.home.slideBitdefenderTag,
+            body: dict.home.slideBitdefenderBody,
+            variant: "bitdefender",
+          },
+          {
+            title: dict.home.slideDevTitle,
+            tagOne: dict.home.slideDevTag,
+            body: dict.home.slideDevBody,
+            variant: "devices",
+          },
+        ]}
       />
 
       <LogoCloud label={dict.home.trustedBy} />

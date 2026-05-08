@@ -35,6 +35,23 @@
   --c-surface: #F6F9FC;
   --c-border: #E3E8EE;
   --c-bg: #FFFFFF;
+
+  /* hero ribbon — light mode pastels */
+  --hero-wash-1: #A8FFE7;
+  --hero-wash-2: #C7BBFF;
+  --hero-wash-3: #FFB7D5;
+  --hero-wash-4: #FFD89B;
+  --hero-blob-teal: #00C9A7;
+  --hero-blob-violet: #5B4FE9;
+  --hero-blob-purple: #7B6FF0;
+  --hero-blob-cyan: #00BFFF;
+  --hero-overlay: rgba(255, 255, 255, 0.6);
+
+  /* hero text colours — readable on the light pastel ribbon */
+  --hero-fg: #0A2540;
+  --hero-fg-soft: rgba(10, 37, 64, 0.8);
+  --hero-fg-muted: rgba(10, 37, 64, 0.75);
+  --hero-fg-faint: rgba(10, 37, 64, 0.4);
 }
 
 [data-theme="dark"] {
@@ -44,6 +61,8 @@
   --c-surface: #0F1A30;
   --c-border: #1F2D4A;
   --c-bg: #060B1A;
+
+  /* hero ribbon keeps the same pastel palette in dark mode — it's a brand element */
 }
 
 @utility bg-gradient-hero {

@@ -11,6 +11,12 @@
     "heroTagOne": "#followTheStream",
     "heroTagTwo": "#fullStackSolutions",
     "heroBody": "We design, build and run enterprise software for finance and public services — engineered for scale, secured to ISO standards, delivered on time.",
+    "slideBitdefenderTitle": "Bitdefender protection",
+    "slideBitdefenderTag": "#PremiumSecurity",
+    "slideBitdefenderBody": "Premium protection for business IT infrastructure against cyber attacks — Bitdefender solutions for enterprises and institutions.",
+    "slideDevTitle": "IT development with us",
+    "slideDevTag": "#beyondTech",
+    "slideDevBody": "IT development with us is more than a project — we look beyond tech to offer valuable solutions.",
     "contactSales": "Contact us",
     "trustedBy": "Trusted by institutions and enterprises",
     "buildLabel": "Build",
@@ -96,12 +102,67 @@
     ]
   },
   "whatWeDo": {
-    "heroTitle": "What we do"
+    "heroTitle": "What we do",
+    "heroEyebrow": "Our services",
+    "heroBody": "From financial platforms to digital registers and cybersecurity — we deliver enterprise-grade systems for institutions and businesses.",
+    "projectsLabel": "Selected projects",
+    "projects": {
+      "financialSoftware": [
+        "Online platform for applying for business subsidies",
+        "Pension and Disability Insurance Fund of Montenegro",
+        "COVID-19 wage subsidies application platform",
+        "UCG3 (Taxis) information system"
+      ],
+      "registers": [
+        "Digital Address Register of Montenegro",
+        "Central Register of Business Entities",
+        "eFirma — Online platform for business entities registration",
+        "Register of citizens (CR)"
+      ],
+      "digitalTransformation": [
+        "Document Management System — Ministry of Defense",
+        "Parliament of Montenegro ERP",
+        "Ministry of Interior digital workflows"
+      ],
+      "itInfrastructure": [
+        "Private cloud infrastructure for public institutions",
+        "High-availability database clusters",
+        "Network and security architecture design"
+      ],
+      "consulting": [
+        "IT strategy and digital roadmap advisory",
+        "Procurement and tender support",
+        "Architecture and security audits"
+      ],
+      "cybersecurity": [
+        "Bitdefender GravityZone for enterprises",
+        "Endpoint and email protection rollouts",
+        "Security operations and threat monitoring"
+      ]
+    }
   },
   "technologies": {
     "heroTitle": "Technologies",
     "sectionTitle": "Technologies we use",
-    "sectionBody": "By matching a different technologies to business needs we get the most efficiency. We love to govern new exciting technologies and tools that motivate us to build beautiful and functional software. We leverage our deep tech expertise in Oracle, Microsoft .NET, C#, MVC, Java, Angular, Apex, to develop custom cutting-edge products."
+    "sectionBody": "By matching different technologies to business needs we get the most efficiency. We love exploring new tools that help us build beautiful, functional, and reliable software — backed by deep expertise in Oracle, Microsoft .NET, C#, Java, Angular, and modern DevOps practices.",
+    "items": [
+      {
+        "title": ".NET",
+        "body": "Microsoft's development platform has been a great choice for the previous two decades, mainly due to its intuitive and versatile frameworks, languages and tooling. C# and .NET Framework/Core are, almost universally, praised as one of the \"Most Loved\" technologies for web development. Considering their maturity, they are also more feature-rich and more complete than newer alternatives."
+      },
+      {
+        "title": "Oracle",
+        "body": "Scalability and security have always made Oracle databases well suited for enterprise, and even nowadays has an edge over competitors in terms of both core database features and cutting-edge functionality."
+      },
+      {
+        "title": "DevOps",
+        "body": "Our developers merge their code changes into a central repository, after which automated builds and tests are run. Continuous integration is used in most of our projects, for higher quality and faster development."
+      },
+      {
+        "title": "Microservices",
+        "body": "Microservices have an important role in modern development, allowing easier deployment, testing and long-term maintenance of our solutions. By dividing complex systems into a collection of independent, single-responsibility components, microservices facilitate simple and agile development that keeps up with modern business requirements."
+      }
+    ]
   },
   "about": {
     "heroTitle": "About us",

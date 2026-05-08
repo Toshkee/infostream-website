@@ -1,4 +1,52 @@
 @AGENTS.md
+
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Commands
+
+- `npm run dev` — start dev server (localhost:3000)
+- `npm run build` — production build
+- `npm run start` — serve production build
+- `npm run lint` — ESLint (flat config, `eslint-config-next` core-web-vitals + typescript)
+
+There is no test runner configured.
+
+## Stack & version-specific notes
+
+- **Next.js 16** + **React 19** + **Tailwind v4** (PostCSS plugin only — no `tailwind.config`; tokens live in [app/globals.css](app/globals.css)). AGENTS.md warns that APIs differ from training data — consult `node_modules/next/dist/docs/` before writing Next-specific code.
+- The spec below mentions `next-intl`, but i18n is **hand-rolled** (no `next-intl` dependency). Don't add it without asking.
+- Route handlers/pages receive `params` as a **Promise** — always `await params` (see [app/[locale]/layout.tsx](app/[locale]/layout.tsx)).
+
+## Architecture
+
+### i18n (hand-rolled, server-only)
+- Locales are non-standard: **`mne`** (Montenegrin, default) and **`eng`** (English) — not `me`/`en`. Defined in [lib/i18n.ts](lib/i18n.ts).
+- Message files use ISO codes though: [messages/en.json](messages/en.json), [messages/me.json](messages/me.json) (mapped inside `lib/i18n.ts`).
+- `getDictionary(locale)` is `server-only`. Pass slices of the dictionary down to client components as props rather than importing it client-side.
+- Locale routing happens via [proxy.ts](proxy.ts) — Next 16's renamed `middleware.ts`. The matcher excludes `_next`, `favicon.ico`, and any path with a file extension; everything else without a leading locale gets redirected based on `accept-language`.
+- All routes live under `app/[locale]/`. The root [app/layout.tsx](app/layout.tsx) is locale-agnostic; [app/[locale]/layout.tsx](app/[locale]/layout.tsx) loads the dictionary and renders Navbar/Footer.
+
+### Services data model
+[lib/services.ts](lib/services.ts) is the single source of truth for the 7 service offerings:
+- `ServiceKey` (camelCase) ↔ URL slug (kebab-case) mapping in `SERVICE_SLUGS`
+- `SERVICES_ORDER` controls homepage section order (note: `paymentSystems` is in `SERVICE_SLUGS` but excluded from `SERVICES_ORDER`)
+- Use `slugToKey(slug)` in `[service]` dynamic routes; copy for each service is keyed by `ServiceKey` inside the dictionary JSON.
+
+### Component layout
+- `components/layout/` — Navbar, Footer (receive dict slices as props)
+- `components/home/` — homepage sections (Hero, ServiceSection, CtaBanner)
+- `components/services/` — shared pieces for `/what-we-do` and its subpages (PageHero, ServiceIllustration)
+- `components/technologies/` — TechStack / orbit diagram
+- `components/about/` — CoreValues, TeamGrid
+- `components/ui/` — primitives (Button, GradientRibbon, Logo, SectionHeading)
+
+### Styling
+Tailwind v4 with brand tokens defined as CSS variables in [app/globals.css](app/globals.css). Reference colors via the tokens (gradient-hero, gradient-wwd, color-accent, etc.) rather than hard-coding hex values — see the design tokens section below.
+
+---
+
 # Infostream Website — Next.js Rebuild Spec
 
 ## Project Overview
