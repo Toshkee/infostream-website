@@ -30,10 +30,10 @@ export function Hero({ slides }: { slides: Slide[] }) {
   const head = parts.join(" ");
 
   return (
-    <section className="relative overflow-hidden bg-[var(--c-bg)] pt-20 pb-32 lg:pt-24 lg:pb-40">
+    <section className="relative overflow-hidden bg-[var(--c-bg)] pt-20 pb-16 sm:pb-24 lg:pt-24 lg:pb-40">
       <GradientRibbon height={620} />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-end gap-16 px-6 lg:grid-cols-[1.15fr_1fr] lg:-translate-y-16">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-end gap-10 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:-translate-y-16">
         <AnimatePresence mode="wait">
           <motion.div
             key={`text-${index}`}
@@ -42,23 +42,38 @@ export function Hero({ slides }: { slides: Slide[] }) {
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="mb-6 inline-flex items-center gap-2 text-sm font-medium text-[color:var(--hero-fg-muted)]">
+            <p className="mb-4 inline-flex items-center gap-2 text-sm font-medium text-[color:var(--hero-fg-muted)]">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-violet" />
               {slide.tagOne}
               {slide.tagTwo ? ` · ${slide.tagTwo}` : ""}
             </p>
 
-            <h1 className="text-[clamp(2.75rem,6vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-[color:var(--hero-fg)]">
+            <h1 className="text-[clamp(2rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-[color:var(--hero-fg)]">
               {head}{" "}
               <span className="text-gradient-brand">{lastWord}</span>
               <span className="text-brand-teal">.</span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-xl leading-relaxed text-[color:var(--hero-fg-soft)]">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-[color:var(--hero-fg-soft)] sm:text-xl sm:mt-8">
               {slide.body}
             </p>
           </motion.div>
         </AnimatePresence>
+
+        <div className="relative h-[260px] sm:h-[360px] lg:hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`media-mobile-${index}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute inset-0 flex items-end justify-center"
+            >
+              <SlideMedia variant={slide.variant} />
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
         <div className="relative hidden lg:block h-[480px]">
           <AnimatePresence mode="wait">
@@ -84,7 +99,7 @@ export function Hero({ slides }: { slides: Slide[] }) {
       </div>
 
       {slides.length > 1 && (
-        <div className="absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
+        <div className="absolute right-4 top-1/2 z-20 flex -translate-y-1/2 flex-col gap-3 sm:right-6">
           {slides.map((_, i) => (
             <button
               key={i}

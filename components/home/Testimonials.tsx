@@ -21,18 +21,18 @@ export function Testimonials({
   items: Testimonial[];
 }) {
   return (
-    <section className="relative bg-[var(--c-bg)] py-28">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="relative bg-[var(--c-bg)] py-16 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-brand-violet">
             Testimonials
           </p>
-          <h2 className="text-4xl font-semibold tracking-tight text-heading sm:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-heading sm:text-4xl lg:text-5xl">
             {title} <span className="text-gradient-brand">{titleAccent}</span>
           </h2>
         </div>
 
-        <ul className="mt-16 grid gap-6 md:grid-cols-3">
+        <ul className="mt-10 sm:mt-16 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {items.map((t, i) => (
             <motion.li
               key={i}

@@ -48,7 +48,7 @@ export function Navbar({ locale, nav }: { locale: string; nav: NavDict }) {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-4">
         <Link href={`/${locale}`} aria-label="Infostream home" className="-ml-4 mt-1">
           <Logo variant="color" size="lg" />
         </Link>
@@ -111,41 +111,48 @@ export function Navbar({ locale, nav }: { locale: string; nav: NavDict }) {
 
         <button
           aria-label="Toggle menu"
-          className="md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <X className="text-heading" /> : <Menu className="text-heading" />}
+          {open ? <X className="h-5 w-5 text-heading" /> : <Menu className="h-5 w-5 text-heading" />}
         </button>
       </nav>
 
       {open && (
-        <div className="border-t border-border bg-[var(--c-bg)] px-6 py-4 md:hidden">
-          <ul className="flex flex-col gap-3">
+        <div className="border-t border-border bg-[var(--c-bg)] px-4 py-3 md:hidden">
+          <ul className="flex flex-col">
             {links.map((l) => (
               <li key={l.href}>
                 <Link
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-heading"
+                  className={`block py-3 text-base font-medium transition-colors ${
+                    isActive(l.href, l.exact) ? "text-brand-violet" : "text-heading"
+                  }`}
                 >
                   {l.label}
                 </Link>
               </li>
             ))}
-            <li className="flex gap-3 pt-2 text-sm">
-              <Link
-                href={switchHref("mne")}
-                className={locale === "mne" ? "font-bold text-heading" : "text-muted"}
-              >
-                mne
-              </Link>
-              <span className="text-border">/</span>
-              <Link
-                href={switchHref("eng")}
-                className={locale === "eng" ? "font-bold text-heading" : "text-muted"}
-              >
-                eng
-              </Link>
+            <li className="flex items-center gap-4 border-t border-border pt-4 mt-2 pb-2">
+              <div className="flex items-center gap-2 text-sm">
+                <Link
+                  href={switchHref("mne")}
+                  onClick={() => setOpen(false)}
+                  className={locale === "mne" ? "font-semibold text-heading" : "text-muted"}
+                >
+                  mne
+                </Link>
+                <span className="text-border">/</span>
+                <Link
+                  href={switchHref("eng")}
+                  onClick={() => setOpen(false)}
+                  className={locale === "eng" ? "font-semibold text-heading" : "text-muted"}
+                >
+                  eng
+                </Link>
+              </div>
+              <ThemeToggle />
             </li>
           </ul>
         </div>

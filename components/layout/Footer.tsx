@@ -33,7 +33,7 @@ export function Footer({
 }) {
   return (
     <footer className="border-t border-border bg-[var(--c-bg)]">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 py-14 sm:py-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <Logo />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-body">
@@ -88,7 +88,7 @@ export function Footer({
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-6 text-xs text-muted sm:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 sm:px-6 py-6 text-xs text-muted sm:flex-row">
           <span>© {new Date().getFullYear()} Infostream IT Solutions</span>
           <span>Built in Montenegro · ISO 27001 · ISO 9001</span>
         </div>

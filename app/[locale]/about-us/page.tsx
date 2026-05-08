@@ -32,7 +32,7 @@ export default async function AboutPage({
         body={dict.about.paragraphs[0]}
       />
 
-      <section className="mx-auto max-w-3xl px-6 pb-24">
+      <section className="mx-auto max-w-3xl px-4 sm:px-6 pb-14 sm:pb-24">
         <div className="space-y-6 text-lg leading-relaxed text-body">
           {dict.about.paragraphs.slice(1).map((p, i) => (
             <p key={i}>{p}</p>

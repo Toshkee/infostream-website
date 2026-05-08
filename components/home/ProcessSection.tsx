@@ -20,25 +20,25 @@ export function ProcessSection({
   steps: Step[];
 }) {
   return (
-    <section className="relative overflow-hidden bg-surface py-28">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="relative overflow-hidden bg-surface py-16 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-brand-violet">
             {eyebrow}
           </p>
-          <h2 className="text-4xl font-semibold tracking-tight text-heading sm:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-heading sm:text-4xl lg:text-5xl">
             {title} <span className="text-gradient-brand">{titleAccent}</span>
           </h2>
         </div>
 
-        <div className="relative mt-20">
+        <div className="relative mt-12 sm:mt-20">
           {/* connector line */}
           <div
             aria-hidden
             className="absolute left-0 right-0 top-8 hidden h-px bg-gradient-to-r from-transparent via-brand-violet/30 to-transparent md:block"
           />
 
-          <ol className="grid gap-8 md:grid-cols-4">
+          <ol className="grid gap-8 grid-cols-2 md:grid-cols-4">
             {steps.map((s, i) => {
               const Icon = ICONS[i] ?? Compass;
               return (

@@ -42,7 +42,7 @@ export default async function ServicePage({
     <>
       <PageHero title={s.title} />
 
-      <div className="mx-auto max-w-5xl px-6 py-16">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-16">
         <Link
           href={`/${locale}/what-we-do`}
           className="mb-8 inline-flex items-center gap-2 text-sm text-body hover:text-brand-teal"
@@ -51,10 +51,12 @@ export default async function ServicePage({
           {dict.whatWeDo.heroTitle}
         </Link>
 
-        <div className="grid gap-12 md:grid-cols-2 md:items-center">
-          <ServiceIllustration serviceKey={key} />
+        <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-12">
+          <div className="flex justify-center">
+            <ServiceIllustration serviceKey={key} />
+          </div>
           <div>
-            <h2 className="text-2xl font-semibold text-heading">{s.title}</h2>
+            <h2 className="text-2xl font-semibold text-heading sm:text-3xl">{s.title}</h2>
             <p className="mt-4 text-lg leading-relaxed text-body">
               {s.summary}
             </p>

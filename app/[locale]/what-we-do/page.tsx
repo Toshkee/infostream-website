@@ -31,8 +31,7 @@ export default async function WhatWeDoPage({
         title={dict.whatWeDo.heroTitle}
         eyebrow={dict.whatWeDo.heroEyebrow}
         body={dict.whatWeDo.heroBody}
-        image={{ src: "/images/pic1.jpg", alt: "Mobile and tablet analytics dashboard mockups" }}
-        imageRotate={30}
+        image={{ src: "/images/wwd-hero.jpg", alt: "Mobile and tablet analytics dashboard mockups" }}
       />
 
       <div className="divide-y divide-border bg-surface">

@@ -34,9 +34,9 @@ export function ServiceRow({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:gap-20 lg:py-28"
+      className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 py-14 sm:py-20 lg:grid-cols-2 lg:gap-20 lg:py-28"
     >
-      <div className={imageRight ? "lg:order-1" : "lg:order-2"}>
+      <div className={`flex justify-center ${imageRight ? "lg:order-1" : "lg:order-2"}`}>
         <ServiceIllustration serviceKey={serviceKey} priority={index === 0} />
       </div>
 

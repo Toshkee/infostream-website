@@ -29,8 +29,8 @@ export function ServiceSection({
   const isAlt = (index ?? 0) % 2 === 1;
 
   return (
-    <section className={`${isAlt ? "bg-surface" : "bg-[var(--c-bg)]"} py-24`}>
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 md:grid-cols-2">
+    <section className={`${isAlt ? "bg-surface" : "bg-[var(--c-bg)]"} py-14 sm:py-20 lg:py-24`}>
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 md:grid-cols-2 md:gap-16">
         <motion.div
           initial={{ opacity: 0, x: -fromX }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -42,7 +42,7 @@ export function ServiceSection({
             {String((index ?? 0) + 1).padStart(2, "0")} —{" "}
             {imageRight ? buildLabel : operateLabel}
           </p>
-          <h2 className="text-4xl font-semibold tracking-tight text-heading sm:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-heading sm:text-4xl lg:text-5xl">
             {title}
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-body">{body}</p>
@@ -60,7 +60,7 @@ export function ServiceSection({
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className={imageRight ? "md:order-2" : "md:order-1"}
+          className={`${imageRight ? "md:order-2" : "md:order-1"} flex justify-center`}
         >
           {illustration}
         </motion.div>

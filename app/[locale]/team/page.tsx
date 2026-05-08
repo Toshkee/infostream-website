@@ -27,7 +27,7 @@ export default async function TeamPage({
   return (
     <>
       <PageHero title={dict.team.title} variant="about" />
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-20">
         <TeamGrid />
       </section>
     </>

@@ -28,18 +28,17 @@ export default async function TechnologiesPage({
     <>
       <PageHero
         title={dict.technologies.heroTitle}
+        body={dict.technologies.sectionBody}
         image={{ src: "/images/pic8.jpg", alt: "Team building software with modern tools" }}
       />
 
-      <section className="mx-auto max-w-6xl px-6 pb-24">
-        <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-body">
-          {dict.technologies.sectionBody}
-        </p>
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 pt-14 sm:pt-20 pb-4 text-center">
+        <h2 className="text-2xl font-semibold tracking-tight text-heading sm:text-3xl lg:text-4xl">
+          {dict.technologies.sectionTitle}
+        </h2>
+      </div>
 
-        <div className="mt-16">
-          <TechStack items={dict.technologies.items} />
-        </div>
-      </section>
+      <TechStack items={dict.technologies.items} />
     </>
   );
 }

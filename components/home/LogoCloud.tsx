@@ -9,8 +9,8 @@ const partners = [
 
 export function LogoCloud({ label }: { label: string }) {
   return (
-    <section className="border-y border-border bg-[var(--c-bg)] py-14">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="border-y border-border bg-[var(--c-bg)] py-10 sm:py-14">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted">
           {label}
         </p>
