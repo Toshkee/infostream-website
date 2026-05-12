@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { ServiceIllustration } from "@/components/services/ServiceIllustration";
 import type { ServiceKey } from "@/lib/services";
@@ -33,7 +34,7 @@ export function ServiceRow({
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.6, ease: EASE }}
       className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 py-14 sm:py-20 lg:grid-cols-2 lg:gap-20 lg:py-28"
     >
       <div className={`flex justify-center ${imageRight ? "lg:order-1" : "lg:order-2"}`}>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { EASE, VIEWPORT } from "@/lib/motion";
 import { ArrowRight } from "lucide-react";
 
 export function ServiceSection({
@@ -34,8 +35,8 @@ export function ServiceSection({
         <motion.div
           initial={{ opacity: 0, x: -fromX }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          viewport={VIEWPORT}
+          transition={{ duration: 0.6, ease: EASE }}
           className={imageRight ? "md:order-1" : "md:order-2"}
         >
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-brand-violet">
@@ -58,8 +59,8 @@ export function ServiceSection({
         <motion.div
           initial={{ opacity: 0, x: fromX }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          viewport={VIEWPORT}
+          transition={{ duration: 0.6, ease: EASE }}
           className={`${imageRight ? "md:order-2" : "md:order-1"} flex justify-center`}
         >
           {illustration}

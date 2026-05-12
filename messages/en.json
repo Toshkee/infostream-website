@@ -147,12 +147,12 @@
     "sectionBody": "By matching different technologies to business needs we get the most efficiency. We love exploring new tools that help us build beautiful, functional, and reliable software — backed by deep expertise in Oracle, Microsoft .NET, C#, Java, Angular, and modern DevOps practices.",
     "items": [
       {
-        "title": ".NET",
-        "body": "Microsoft's development platform has been a great choice for the previous two decades, mainly due to its intuitive and versatile frameworks, languages and tooling. C# and .NET Framework/Core are, almost universally, praised as one of the \"Most Loved\" technologies for web development. Considering their maturity, they are also more feature-rich and more complete than newer alternatives."
-      },
-      {
         "title": "Oracle",
         "body": "Scalability and security have always made Oracle databases well suited for enterprise, and even nowadays has an edge over competitors in terms of both core database features and cutting-edge functionality."
+      },
+      {
+        "title": ".NET",
+        "body": "Microsoft's development platform has been a great choice for the previous two decades, mainly due to its intuitive and versatile frameworks, languages and tooling. C# and .NET Framework/Core are, almost universally, praised as one of the \"Most Loved\" technologies for web development. Considering their maturity, they are also more feature-rich and more complete than newer alternatives."
       },
       {
         "title": "DevOps",

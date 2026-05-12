@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE, VIEWPORT } from "@/lib/motion";
 import { Quote } from "lucide-react";
 
 type Testimonial = {
@@ -38,8 +39,8 @@ export function Testimonials({
               key={i}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              viewport={VIEWPORT}
+              transition={{ duration: 0.5, delay: i * 0.08, ease: EASE }}
               className="group relative flex flex-col rounded-2xl border border-border bg-surface p-7 shadow-card transition-all hover:-translate-y-1 hover:shadow-card-hover"
             >
               <Quote className="h-7 w-7 text-brand-violet/30" />

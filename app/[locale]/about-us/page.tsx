@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getDictionary, hasLocale } from "@/lib/i18n";
 import { PageHero } from "@/components/services/PageHero";
 import { CoreValues } from "@/components/about/CoreValues";
+import { MapSection } from "@/components/layout/MapSection";
 
 export async function generateMetadata({
   params,
@@ -45,6 +46,8 @@ export default async function AboutPage({
         titleAccent={dict.about.valuesTitleAccent}
         values={dict.about.values}
       />
+
+      <MapSection />
     </>
   );
 }

@@ -10,7 +10,7 @@
     "heroTitle": "Poslovna IT rješenja",
     "heroTagOne": "#followTheStream",
     "heroTagTwo": "#fullStackSolutions",
-    "heroBody": "Dizajniramo, gradimo i održavamo enterprise softver za finansije i javni sektor — projektovan za skaliranje, osiguran prema ISO standardima, isporučen na vrijeme.",
+    "heroBody": "Dizajniramo, gradimo i održavamo enterprise softver za finansije i javni sektor — razvijen za skaliranje, osiguran prema ISO standardima, isporučen na vrijeme.",
     "slideBitdefenderTitle": "Bitdefender zaštita",
     "slideBitdefenderTag": "#PremiumSecurity",
     "slideBitdefenderBody": "Vrhunska zaštita poslovne IT infrastrukture od sajber napada — uz Bitdefender rješenja za preduzeća i institucije.",
@@ -147,12 +147,12 @@
     "sectionBody": "Prilagođavanjem različitih tehnologija poslovnim potrebama postižemo najveću efikasnost. Volimo da istražujemo nove alate koji nam pomažu da gradimo lijep, funkcionalan i pouzdan softver — uz duboku ekspertizu u Oracle, Microsoft .NET, C#, Java, Angular i savremenim DevOps praksama.",
     "items": [
       {
-        "title": ".NET",
-        "body": "Microsoftova razvojna platforma već dvije decenije predstavlja odličan izbor, prvenstveno zahvaljujući intuitivnim i svestranim frameworkovima, jezicima i alatima. C# i .NET Framework/Core gotovo univerzalno se smatraju jednom od „najomiljenijih\" tehnologija za web razvoj. S obzirom na svoju zrelost, bogatiji su funkcionalnostima i kompletniji od novijih alternativa."
-      },
-      {
         "title": "Oracle",
         "body": "Skalabilnost i sigurnost oduvijek su činile Oracle baze podataka pogodnim za enterprise okruženja, a i danas imaju prednost nad konkurencijom kako u osnovnim funkcijama baze, tako i u naprednim mogućnostima."
+      },
+      {
+        "title": ".NET",
+        "body": "Microsoftova razvojna platforma već dvije decenije predstavlja odličan izbor, prvenstveno zahvaljujući intuitivnim i svestranim frameworkovima, jezicima i alatima. C# i .NET Framework/Core gotovo univerzalno se smatraju jednom od „najomiljenijih\" tehnologija za web razvoj. S obzirom na svoju zrelost, bogatiji su funkcionalnostima i kompletniji od novijih alternativa."
       },
       {
         "title": "DevOps",

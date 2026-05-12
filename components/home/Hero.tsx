@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { GradientRibbon } from "@/components/ui/GradientRibbon";
+import { EASE } from "@/lib/motion";
 
 type Slide = {
   title: string;
@@ -40,7 +41,7 @@ export function Hero({ slides }: { slides: Slide[] }) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: EASE }}
           >
             <p className="mb-4 inline-flex items-center gap-2 text-sm font-medium text-[color:var(--hero-fg-muted)]">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-violet" />
@@ -67,7 +68,7 @@ export function Hero({ slides }: { slides: Slide[] }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.7, ease: EASE }}
               className="absolute inset-0 flex items-end justify-center"
             >
               <SlideMedia variant={slide.variant} />
@@ -82,7 +83,7 @@ export function Hero({ slides }: { slides: Slide[] }) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.7, ease: EASE }}
               className="absolute inset-0 flex items-end justify-center"
             >
               <motion.div

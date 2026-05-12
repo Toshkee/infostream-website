@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Lightbulb } from "lucide-react";
+import { EASE, VIEWPORT } from "@/lib/motion";
+import { Lightbulb, Star, Shield, Zap } from "lucide-react";
 
 type Value = { title: string; body: string };
+
+const ICONS = [Lightbulb, Star, Shield, Zap];
 
 export function CoreValues({
   title,
@@ -16,55 +19,65 @@ export function CoreValues({
 }) {
   return (
     <section className="bg-surface py-16 sm:py-24">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-center text-3xl font-semibold tracking-tight text-heading sm:text-4xl lg:text-5xl">
           {title}{" "}
           <span className="text-gradient-brand">{titleAccent}</span>
         </h2>
 
-        <div className="relative mt-14 sm:mt-20">
-          {/* vertical line — desktop only */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-brand-teal/40 via-brand-violet/40 to-brand-violet-light/40 md:block" />
+        {/* mobile: vertical list */}
+        <ul className="mt-12 space-y-6 md:hidden">
+          {values.map((v, i) => {
+            const Icon = ICONS[i] ?? Lightbulb;
+            return (
+              <motion.li
+                key={v.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={VIEWPORT}
+                transition={{ duration: 0.4, delay: i * 0.08, ease: EASE }}
+                className="flex gap-4"
+              >
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-violet/10 text-brand-violet ring-1 ring-brand-violet/20">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-heading">{v.title}</h3>
+                  <p className="mt-1 text-sm text-body">{v.body}</p>
+                </div>
+              </motion.li>
+            );
+          })}
+        </ul>
 
-          <ul className="space-y-8 sm:space-y-14">
+        {/* desktop: horizontal steps */}
+        <div className="relative mt-16 hidden md:block">
+          {/* connecting line */}
+          <div
+            aria-hidden
+            className="absolute top-7 left-0 right-0 h-px bg-gradient-to-r from-brand-teal/40 via-brand-violet/40 to-brand-violet/20"
+            style={{ left: "calc(12.5%)", right: "calc(12.5%)" }}
+          />
+
+          <ul className="grid grid-cols-4 gap-6">
             {values.map((v, i) => {
-              const left = i % 2 === 0;
-              const Icon = i === 0 ? Lightbulb : CheckCircle2;
+              const Icon = ICONS[i] ?? Lightbulb;
               return (
                 <motion.li
                   key={v.title}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative flex flex-col gap-4 md:grid md:grid-cols-2 md:items-center md:gap-6"
+                  viewport={VIEWPORT}
+                  transition={{ duration: 0.45, delay: i * 0.1, ease: EASE }}
+                  className="flex flex-col items-center text-center"
                 >
-                  {/* icon — top on mobile, centred col on desktop */}
-                  <div className="flex items-center gap-4 md:hidden">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--c-bg)] text-brand-violet shadow-card ring-1 ring-border">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-heading">{v.title}</h3>
+                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-[var(--c-bg)] text-brand-violet shadow-card ring-1 ring-border">
+                    <Icon className="h-6 w-6" />
                   </div>
-                  <p className="pl-16 text-body md:hidden">{v.body}</p>
-
-                  {/* desktop layout */}
-                  <div
-                    className={`hidden md:block ${
-                      left ? "md:order-1 md:pr-16 md:text-right" : "md:order-3 md:pl-16"
-                    }`}
-                  >
-                    <h3 className="text-xl font-semibold text-heading">{v.title}</h3>
-                    <p className="mt-2 text-body">{v.body}</p>
-                  </div>
-
-                  <div className="hidden md:order-2 md:flex md:justify-center">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--c-bg)] text-brand-violet shadow-card ring-1 ring-border">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                  </div>
-
-                  <div className={`${left ? "md:order-3" : "md:order-1"} hidden md:block`} />
+                  <h3 className="mt-3 text-base font-semibold text-heading leading-snug">
+                    {v.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-body leading-relaxed">{v.body}</p>
                 </motion.li>
               );
             })}

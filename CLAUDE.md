@@ -43,7 +43,27 @@ Tailwind v4 with no `tailwind.config`. All brand tokens are CSS variables in [ap
 ### Dark mode
 Toggled by setting `data-theme="dark"` on a root element (see [components/layout/ThemeToggle.tsx](components/layout/ThemeToggle.tsx)). The `@custom-variant dark` in globals.css targets `[data-theme="dark"]`, not `prefers-color-scheme` or a `dark` class.
 
+### Routes
+All pages under `app/[locale]/` and implement `generateStaticParams` to emit both locales at build time. Service subpages additionally emit all slugs.
+
+| Path | File |
+|---|---|
+| `/` | `app/[locale]/page.tsx` |
+| `/about-us` | `app/[locale]/about-us/page.tsx` |
+| `/team` | `app/[locale]/team/page.tsx` |
+| `/technologies` | `app/[locale]/technologies/page.tsx` |
+| `/what-we-do` | `app/[locale]/what-we-do/page.tsx` |
+| `/what-we-do/[slug]` | `app/[locale]/what-we-do/[service]/page.tsx` |
+
 ### Component conventions
 - [components/ui/Button.tsx](components/ui/Button.tsx) — polymorphic: renders a `<Link>` when `href` is provided, `<button>` otherwise. Variants: `primary`, `teal`, `ghost`.
-- Navbar receives `locale` + a `nav` dict slice; Footer receives `locale` + `dict` + `navDict`.
-- Components under `components/services/` are shared across the `/what-we-do` index and all service subpages.
+- [components/ui/SectionHeading.tsx](components/ui/SectionHeading.tsx) — two-line heading with optional `eyebrow` label; `align` prop accepts `"left"` (default) or `"center"`.
+- [components/ui/GradientRibbon.tsx](components/ui/GradientRibbon.tsx) — animated hero background blob (client component). Uses `--hero-*` CSS variables defined in `globals.css`.
+- [components/ui/Logo.tsx](components/ui/Logo.tsx), [SocialIcons.tsx](components/ui/SocialIcons.tsx) — shared brand assets.
+- [components/layout/MapSection.tsx](components/layout/MapSection.tsx) — standalone contact + Google Maps embed section used at the bottom of pages (not inside Footer). Has hardcoded English content — not i18n'd.
+- Navbar receives `locale` + a `nav` dict slice; Footer receives `locale` + `dict` (= `dict.footer` slice) + `navDict` (= `dict.nav` slice).
+- Components under `components/services/` are shared across the `/what-we-do` index and all service subpages: `PageHero` (full-bleed hero), `ServiceRow` (index list item), `ServiceIllustration` (per-service SVG illustration keyed by `ServiceKey`).
+- `components/home/` — homepage-only sections: `Hero`, `ServiceSection`, `ProcessSection`, `Testimonials`, `LogoCloud`.
+- `components/technologies/` — `TechStack` (grid layout) + `TechCircle` (animated orbital ring).
+- `components/about/` — `CoreValues` (4-item hardcoded icon set; expects exactly 4 values), `TeamGrid`.
+- All pages export `generateMetadata` alongside the default export; it follows the same `await params` pattern and pulls titles from the dictionary.

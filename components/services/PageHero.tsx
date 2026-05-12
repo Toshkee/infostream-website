@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { GradientRibbon } from "@/components/ui/GradientRibbon";
+import { EASE } from "@/lib/motion";
 
 export function PageHero({
   title,
@@ -14,8 +15,6 @@ export function PageHero({
   title: string;
   eyebrow?: string;
   body?: string;
-  /** kept for backwards compat — no longer styles differently */
-  variant?: "wwd" | "about";
   image?: { src: string; alt: string };
   imageRotate?: number;
 }) {
@@ -46,7 +45,7 @@ export function PageHero({
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: EASE }}
             className="text-[clamp(2rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-[color:var(--hero-fg)]"
           >
             {title}
@@ -55,7 +54,7 @@ export function PageHero({
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
               className={
                 hasImage
                   ? "mt-6 max-w-xl text-xl leading-relaxed text-[color:var(--hero-fg-soft)]"
@@ -71,7 +70,7 @@ export function PageHero({
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
             className="relative hidden sm:block"
           >
             <motion.div

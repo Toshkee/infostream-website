@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 
 type Item = { title: string; body: string };
 
@@ -34,7 +35,7 @@ export function TechStack({ items }: { items: Item[] }) {
                 initial={{ opacity: 0, x: imageRight ? -36 : 36 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, ease: EASE }}
                 className={imageRight ? "md:order-1" : "md:order-2"}
               >
                 <p
@@ -65,7 +66,7 @@ export function TechStack({ items }: { items: Item[] }) {
                   initial={{ opacity: 0, x: imageRight ? 36 : -36 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
-                  transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
                   className={imageRight ? "md:order-2" : "md:order-1"}
                 >
                   <motion.div

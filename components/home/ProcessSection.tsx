@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE, VIEWPORT } from "@/lib/motion";
 import { Compass, PenTool, Hammer, LineChart } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -46,11 +47,11 @@ export function ProcessSection({
                   key={i}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={VIEWPORT}
                   transition={{
                     duration: 0.5,
                     delay: i * 0.1,
-                    ease: [0.22, 1, 0.36, 1],
+                    ease: EASE,
                   }}
                   className="relative flex flex-col items-center text-center md:items-start md:text-left"
                 >
